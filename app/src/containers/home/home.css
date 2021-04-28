@@ -1,0 +1,29 @@
+.homeContainer {
+
+}
+.imgMovie {
+    width: 100em;
+    height: 40em;
+}
+@media screen and ( max-width: 100em ) {
+    .imgMovie { width: 100%;
+    }
+}
+.container-fluid {
+    display: flex;
+    margin-left: .5em;
+}
+@media screen and ( max-width: 100% ) {
+    .container-fluid { width: 50%;
+    }
+}
+
+.imageDiv {
+    background-color: rgb(220, 219, 215);
+}
+.login {
+    margin-left: 1em;
+}
+.registro {
+    margin-left: 1em;
+}
