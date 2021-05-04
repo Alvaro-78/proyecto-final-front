@@ -10,9 +10,9 @@ const store = createStoreWithMiddleware(
   reducer,
   load({
     preloadState : {
-        dataCustomer : ''
+        dataCustomer : '',
+        states: ["dataCustomer"]
     },
-    states: ["dataCustomer"]
   }),
   
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__({
