@@ -1,11 +1,21 @@
-.registerContainer {
+.formBody {
     display: flex;
-    justify-content: center;
     align-items: center;
-    background: chartreuse;
+    justify-content: center;
+
 }
 
+.registerContainer {    
+    border: 2px solid grey;
+    border-radius: 10px;
+    width: 50%;
+    height: 60%;
+}
 
+.spaceUnderHeader {
+    width: 100%;
+    height: 5em;
+}
 
 @media screen and ( max-width: 500px ) {
     .registerForm { 
@@ -40,4 +50,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.form-check {
+    width: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+.form-check-laber {
+    margin-top: 1em;
+}
+
+.slideButtonStyle {
+    width: 3em;
 }

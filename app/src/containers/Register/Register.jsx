@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import axios from 'axios'
+import axios from 'axios';
 
 import './Register.css';
 import Navbar from '../../components/Navbar/Navbar';
@@ -43,7 +43,7 @@ const Register = () => {
         }
         console.log(body)
         
-        let result = await axios.post('http://localhost:3001/customers', body);
+        let result = await axios.post('http://localhost:3000/customers', body);
 
         console.log(result)
     }
@@ -52,45 +52,96 @@ const Register = () => {
     return (
         <div className="registerBody">
             <div className="header">
-                <Navbar/>              
-            <div className="spaceUnderHeader"></div>
+                <Navbar/>
             </div>
-            <div className="registerContainer"> 
-                <form className="registerForm">
-                    <div className="name">Name
-                        <input type="name" maxLength="30" name="name" onChange={handleState}/>
-                    </div>
-                    <div className="surName">SurName
-                        <input type="text" maxLength="30" name="surName" onChange={handleState}/>
-                    </div>
-                    <div className="email">Email
-                        <input type="email" maxLength="30" name="email" onChange={handleState}/>
-                    </div>
-                    <div className="password">Password
-                        <input type="password" maxLength="30" name="password" onChange={handleState}/>
-                    </div>
-                    <div className="suscription">Suscription
-                        <input type="text" maxLength="30" name="suscription" onChange={handleState}/>
-                    </div>
-                    <div className="address">Address
-                        <input type="address" maxLength="30" name="address" onChange={handleState}/>
-                    </div>
-                    <div className="city">City
-                        <input type="text" maxLength="30" name="city" onChange={handleState}/>
-                    </div>
-                    <div className="zipCode">Zip Code
-                        <input type="number" maxLength="30" name="zip_code" onChange={handleState}/>
-                    </div>                    
-                    <div className="province">Province
-                        <input type="txt" maxLength="30" name="province" onChange={handleState}/>
-                    </div>
-                    <div className="country">Country
-                        <input type="text" maxLength="30" name="country" onChange={handleState}/>
-                    </div>
-                    <div className="phone">Phone
-                        <input type="number" maxLength="30" name="phone" onChange={handleState}/>
-                    </div>
-                </form>          
+            <div className="spaceUnderHeader"></div>
+            <div className="formBody">
+                <div className="registerContainer"> 
+                    <form className="row g-3 needs-validation" noValidate>
+                        <div className="col-md-3">
+                            <label for="validationCustom01" className="form-label">Name</label>
+                            <input type="name" className="form-control" id="validationCustom01" name="name" required onChange={handleState}/>
+                            <div className="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <label for="validationCustom02" className="form-label">SurName</label>
+                            <input type="surname" className="form-control" id="validationCustom02" name="surName" required onChange={handleState}/>
+                            <div className="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <label for="validationCustom03" className="form-label">Email</label>
+                            <div className="input-group has-validation">
+                                <input type="email" className="form-control" id="validationCustom03" name="email" aria-describedby="inputGroupPrepend" required onChange={handleState}/>
+                                <div className="invalid-feedback">
+                                    Please choose a username.
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <label for="validationCustom04" className="form-label">Password</label>
+                            <input type="password" className="form-control" id="validationCustom04" name="password" required onChange={handleState}/>
+                            <div className="invalid-feedback">
+                                Please provide a valid city.
+                            </div>
+                        </div>
+                        <div className="col-md-2">
+                            <label for="validationCustom06" className="form-label">Address</label>
+                            <input type="text" className="form-control" id="validationCustom06" name="address" required onChange={handleState}/>
+                            <div className="invalid-feedback">
+                                Please provide a valid zip.
+                            </div>
+                        </div>
+                        <div className="col-md-3">
+                            <label for="validationCustom07" className="form-label">City</label>
+                            <input type="text" className="form-control" id="validationCustom07" name="city" required onChange={handleState}/>
+                            <div className="invalid-feedback">
+                                Please provide a valid zip.
+                            </div>
+                        </div>
+                        <div className="col-md-3">
+                            <label for="validationCustom08" className="form-label">Province</label>
+                            <input type="text" className="form-control" id="validationCustom08" name="province" required onChange={handleState}/>
+                            <div className="invalid-feedback">
+                                Please provide a valid zip.
+                            </div>
+                        </div>
+                        <div className="col-md-2">
+                            <label for="validationCustom09" className="form-label">Zip Code</label>
+                            <input type="number" className="form-control" id="validationCustom09" name="zip_code" required onChange={handleState}/>
+                            <div className="invalid-feedback">
+                                Please provide a valid zip.
+                            </div>
+                        </div>
+                        <div className="col-md-3">
+                            <label for="validationCustom10" className="form-label">Country</label>
+                            <input type="text" className="form-control" id="validationCustom10" name="country" required onChange={handleState}/>
+                            <div className="invalid-feedback">
+                                Please provide a valid zip.
+                            </div>
+                        </div>
+                        <div className="col-md-3">
+                            <label for="validationCustom11" className="form-label">Phone</label>
+                            <input type="number" className="form-control" id="validationCustom11" name="phone" required onChange={handleState}/>
+                            <div className="invalid-feedback">
+                                Please provide a valid zip.
+                            </div>
+                        </div>
+                        <div className="slideButtonStyle">
+                            <div className="form-check form-switch">
+                                <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
+                                <label className="form-check-label" for="flexSwitchCheckDefault" name="suscription" required onChange={handleState}>Suscription</label>
+                            </div>
+                        </div>                    
+
+                        <div className="col-12">
+                            <button className="btn btn-primary" type="button" onClick={() => sendData()}>Submit form</button>
+                        </div>
+                    </form>            
+                </div>
             </div>
         </div>
     )
