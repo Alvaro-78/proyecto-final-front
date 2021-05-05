@@ -24,12 +24,6 @@ const customerReducer = (state = initialState, action) => {
         customer : initialState
       };
 
-      case REGISTER: 
-      return {
-        ...state, 
-        user: action.payload
-      };
-
     default : 
       return state
 
