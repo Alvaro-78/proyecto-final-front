@@ -59,86 +59,189 @@ const Register = () => {
                 <div className="registerContainer"> 
                     <form className="row g-3 needs-validation" noValidate>
                         <div className="col-md-3">
-                            <label for="validationCustom01" className="form-label">Name</label>
-                            <input type="name" className="form-control" id="validationCustom01" name="name" required onChange={handleState}/>
+                            <label for="validationCustom01" 
+                            className="form-label">
+                                Name
+                            </label>
+                            <input type="name" 
+                            className="form-control" 
+                            id="validationCustom01" 
+                            name="name" 
+                            required 
+                            onChange={handleState}
+                            />
                             <div className="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <label for="validationCustom02" className="form-label">SurName</label>
-                            <input type="surname" className="form-control" id="validationCustom02" name="surName" required onChange={handleState}/>
+                            <label for="validationCustom02" 
+                            className="form-label">
+                                SurName
+                            </label>
+                            <input type="surname" 
+                            className="form-control" 
+                            id="validationCustom02" 
+                            name="surName" 
+                            required 
+                            onChange={handleState}
+                            />
                             <div className="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <label for="validationCustom03" className="form-label">Email</label>
+                            <label for="validationCustom03" 
+                            className="form-label">
+                                Email
+                            </label>
                             <div className="input-group has-validation">
-                                <input type="email" className="form-control" id="validationCustom03" name="email" aria-describedby="inputGroupPrepend" required onChange={handleState}/>
+                                <input type="email" 
+                                className="form-control" 
+                                id="validationCustom03" 
+                                name="email" 
+                                aria-describedby="inputGroupPrepend" 
+                                required 
+                                onChange={handleState}
+                                />
                                 <div className="invalid-feedback">
                                     Please choose a username.
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <label for="validationCustom04" className="form-label">Password</label>
-                            <input type="password" className="form-control" id="validationCustom04" name="password" required onChange={handleState}/>
+                            <label for="validationCustom04" 
+                            className="form-label">
+                                Password
+                            </label>
+                            <input type="password" 
+                            className="form-control" 
+                            id="validationCustom04" 
+                            name="password" 
+                            required 
+                            onChange={handleState}
+                            />
                             <div className="invalid-feedback">
                                 Please provide a valid city.
                             </div>
                         </div>
                         <div className="col-md-2">
-                            <label for="validationCustom06" className="form-label">Address</label>
-                            <input type="text" className="form-control" id="validationCustom06" name="address" required onChange={handleState}/>
+                            <label for="validationCustom06" 
+                            className="form-label">
+                                Address
+                            </label>
+                            <input type="text" 
+                            className="form-control" 
+                            id="validationCustom06" 
+                            name="address" 
+                            required 
+                            onChange={handleState}
+                            />
                             <div className="invalid-feedback">
                                 Please provide a valid zip.
                             </div>
                         </div>
                         <div className="col-md-3">
-                            <label for="validationCustom07" className="form-label">City</label>
-                            <input type="text" className="form-control" id="validationCustom07" name="city" required onChange={handleState}/>
+                            <label for="validationCustom07" 
+                            className="form-label">
+                                City
+                            </label>
+                            <input type="text" 
+                            className="form-control" 
+                            id="validationCustom07" 
+                            name="city" 
+                            required 
+                            onChange={handleState}
+                            />
                             <div className="invalid-feedback">
                                 Please provide a valid zip.
                             </div>
                         </div>
                         <div className="col-md-3">
-                            <label for="validationCustom08" className="form-label">Province</label>
-                            <input type="text" className="form-control" id="validationCustom08" name="province" required onChange={handleState}/>
+                            <label for="validationCustom08" 
+                            className="form-label">
+                                Province
+                            </label>
+                            <input type="text" 
+                            className="form-control" 
+                            id="validationCustom08" 
+                            name="province" 
+                            required 
+                            onChange={handleState}
+                            />
                             <div className="invalid-feedback">
                                 Please provide a valid zip.
                             </div>
                         </div>
                         <div className="col-md-2">
-                            <label for="validationCustom09" className="form-label">Zip Code</label>
-                            <input type="number" className="form-control" id="validationCustom09" name="zip_code" required onChange={handleState}/>
+                            <label for="validationCustom09" 
+                            className="form-label">
+                                Zip Code
+                            </label>
+                            <input type="number" 
+                            className="form-control" 
+                            id="validationCustom09" 
+                            name="zip_code" 
+                            required 
+                            onChange={handleState}
+                            />
                             <div className="invalid-feedback">
                                 Please provide a valid zip.
                             </div>
                         </div>
                         <div className="col-md-3">
-                            <label for="validationCustom10" className="form-label">Country</label>
-                            <input type="text" className="form-control" id="validationCustom10" name="country" required onChange={handleState}/>
+                            <label for="validationCustom10" 
+                            className="form-label">
+                                Country
+                            </label>
+                            <input type="text" 
+                            className="form-control" 
+                            id="validationCustom10" 
+                            name="country" 
+                            required 
+                            onChange={handleState}
+                            />
                             <div className="invalid-feedback">
                                 Please provide a valid zip.
                             </div>
                         </div>
                         <div className="col-md-3">
-                            <label for="validationCustom11" className="form-label">Phone</label>
-                            <input type="number" className="form-control" id="validationCustom11" name="phone" required onChange={handleState}/>
+                            <label for="validationCustom11" 
+                            className="form-label">
+                                Phone
+                            </label>
+                            <input type="number" 
+                            className="form-control" 
+                            id="validationCustom11" 
+                            name="phone" 
+                            required 
+                            onChange={handleState}/>
                             <div className="invalid-feedback">
                                 Please provide a valid zip.
                             </div>
                         </div>
                         <div className="slideButtonStyle">
                             <div className="form-check form-switch">
-                                <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
-                                <label className="form-check-label" for="flexSwitchCheckDefault" name="suscription" required onChange={handleState}>Suscription</label>
+                                <input className="form-check-input" 
+                                type="checkbox" 
+                                id="flexSwitchCheckDefault"
+                                />
+                                <label className="form-check-label" 
+                                for="flexSwitchCheckDefault" 
+                                name="suscription" 
+                                required 
+                                onChange={handleState}>
+                                    Suscription
+                                </label>
                             </div>
                         </div>                    
 
                         <div className="col-12">
-                            <button className="btn btn-primary" type="button" onClick={() => sendData()}>Submit form</button>
+                            <button className="btn btn-primary" 
+                            type="button" 
+                            onClick={() => sendData()}>
+                                Submit form
+                            </button>
                         </div>
                     </form>            
                 </div>
