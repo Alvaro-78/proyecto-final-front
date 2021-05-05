@@ -1,7 +1,8 @@
 import React from 'react';
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer'
 
 import portadamuñecas from '../../assets/portadamuñecas.jpg';
-import Navbar from '../../components/Navbar/Navbar';
 import './Home.css'
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <div className="imageDiv">
                 <img className="imgMovie" alt="dolls" src={portadamuñecas}></img>
             </div>
+            <Footer/>
         </div>
     )
 }
