@@ -1,5 +1,9 @@
+.homeContainer {
+    width: 100%;
+    height: 100%;
+}
 
-.imgMovie {
+.imgDiv {
     width: 70%;
     height: 30%;
 }
