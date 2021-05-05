@@ -1,5 +1,5 @@
 import React from 'react';
-import './Register.css'
+import './Blythe.css';
 
 const Blythe = () => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import './MsdMdd.css'
+import './MsdMdd.css';
 
 const MsdMdd = () => {
     return (
@@ -9,4 +9,4 @@ const MsdMdd = () => {
     )
 }
 
-export default Msd-mdd
+export default MsdMdd
