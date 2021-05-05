@@ -1,0 +1,13 @@
+.footerBody {
+    width: 100%;
+    height: 20em;
+    background-color: grey;
+    display: flex;
+
+}
+.icons {
+    display: flex;
+    flex-direction: row;
+    width: 10em;
+    height: 1.5em;
+}
