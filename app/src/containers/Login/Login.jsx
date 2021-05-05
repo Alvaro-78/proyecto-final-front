@@ -2,6 +2,7 @@ import React,{ useState } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { LOGIN } from "../../redux/Types/customerType";
+import { ADMINLOGIN } from "../../redux/Types/adminType";
 import { useHistory } from 'react-router-dom';
 
 import './Login.css';
@@ -13,8 +14,9 @@ const Login = (props) => {
 
     const [dataLogin, setLogin] = useState({
     
-        email       : '',
-        password    : '', 
+        email     : '',
+        password  : '', 
+        userType   : 'Client'
     });
 
     const handleState = (event, props) => {
@@ -37,16 +39,33 @@ const Login = (props) => {
     
     const sendData = async () => {
 
-        let body = {
-            email       : dataLogin.email,
-            password    : dataLogin.password
-        }
-        console.log(body)
+        try {
 
-       let result = await  axios.post('http://localhost:3000/customers/login', body);
-       console.log(props.dispatch)
-       props.dispatch({type: LOGIN, payload: result.data});
-       return setTimeout(() => {history.push('/')}, 100);
+            let body = {
+                email     : dataLogin.email,
+                password  : dataLogin.password
+            }
+            console.log(dataLogin)
+            
+            if(dataLogin.userType === 'Client') {
+                console.log("el if")
+                let result = await  axios.post('http://localhost:3000/customers/login', body);
+                console.log(props.dispatch)
+                props.dispatch({type: LOGIN, payload: result.data});
+                return setTimeout(() => {history.push('/')}, 100);
+
+            } else {
+                console.log("el else")
+                const resultAdmin = await axios.post('http://localhost:3000/admins/login', body)
+                props.dispatch({type: ADMINLOGIN, payload: resultAdmin.data});
+                return setTimeout(() => {history.push('/home-admin')}, 100);
+            }
+
+        }catch (error) {
+
+            console.log(error, 'Email or password not found')
+
+        }
     }
   
     return (
@@ -58,16 +77,45 @@ const Login = (props) => {
                 <div className="formContainer">
                 <form action="" onSubmit={onSubmit}>
                     <div className="mb-3">
-                        <label for="exampleInputEmail1" className="form-label">Email address</label>
-                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" onChange={handleState}/>
-                        <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                        <label for="exampleInputEmail1" 
+                        className="form-label">Email address</label>
+                        <input type="email" 
+                        className="form-control" 
+                        id="exampleInputEmail1" 
+                        aria-describedby="emailHelp"
+                        name="email" 
+                        onChange={handleState}
+                        />
+                        <div id="emailHelp" 
+                        className="form-text">
+                            We'll never share your email with anyone else.
+                        </div>
                     </div>
                     <div className="mb-3 password">
-                        <label for="exampleInputPassword1" className="form-label">Password</label>
-                        <input type="password" className="form-control" id="myInput" name="password" onChange={handleState}/>
+                        <label for="exampleInputPassword1" 
+                        className="form-label">
+                            Password
+                        </label>
+                        <input type="password" 
+                        className="form-control" 
+                        id="myInput" 
+                        name="password" 
+                        onChange={handleState}
+                        />
                     </div>
-                    <button type="submit" className="btn btn-primary" onClick={() => showPassword()}>show password</button>
-                    <button type="submit" className="btn btn-primary" onClick={() => sendData()}>Send</button>
+                    <select className="select" 
+                    name="userType" 
+                    defaultValue={'DEFAULT'} 
+                    onChange={handleState}>
+                        <option value="Client">Client</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+                    <button type="submit" 
+                    className="btn btn-primary" 
+                    onClick={() => showPassword()}>show password</button>
+                    <button type="submit" 
+                    className="btn btn-primary" 
+                    onClick={() => sendData()}>Send</button>
                 </form>               
              </div>
             </div>
