@@ -1,11 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { LOGOUT } from '../../redux/Types/customerType.js';
+import { ADMINLOGOUT } from '../../redux/Types/adminType.js';
 import {useHistory} from 'react-router-dom';
 import './Navbar.css'
-
-
-
 
 
 
@@ -17,16 +15,19 @@ const Navbar = (props) => {
 
         /*eslint no-restricted-globals: ["error", "event"]*/
 
-        props.dispatch({ type: LOGOUT, payload : {}});
+        props.dispatch({ 
+            type: LOGOUT, payload : {}, 
+            type: ADMINLOGOUT, palyload : {}
+        });
     
         setTimeout(()=> {
             history.push('/');
         },2000);
     };
 
-    console.log(props.customer?.id)
+    console.log(props.admin?.id)
 
-    if(props.customer?.id) {
+    if(props.customer?.id || props.admin?.id) {
 
         return(
             <div className="headerNavbar">
@@ -45,7 +46,7 @@ const Navbar = (props) => {
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                     <a className="nav-link active" 
-                                    aria-current="page" href="/profile">Profile</a>
+                                    aria-current="page" href="/cart">Cart</a>
                                 </li>
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" 
@@ -63,7 +64,7 @@ const Navbar = (props) => {
                                         <li><a className="dropdown-item" href="/categories/">Shoes</a></li>
                                         <li><a className="dropdown-item" href="/categories/">Discount</a></li>
                                         <li><hr className="dropdown-divider"/></li>
-                                        <li><a className="dropdown-item" href="#">Something else here</a></li>
+                                        <li><a className="dropdown-item" href="/size">Size</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -78,7 +79,8 @@ const Navbar = (props) => {
                         </a>
                     </div>
                     <div className="customerName">
-                        ¡Hola {props.customer?.name}!
+                        ¡Hola {props.customer?.name}  {props.admin?.name}!
+                        
                     </div>
                 </nav>
             </div>    
@@ -125,7 +127,7 @@ const Navbar = (props) => {
                                         <li><a className="dropdown-item" href="/categories/">Shoes</a></li>
                                         <li><a className="dropdown-item" href="/categories/">Discount</a></li>
                                         <li><hr className="dropdown-divider"/></li>
-                                        <li><a className="dropdown-item" href="#">Something else here</a></li>
+                                        <li><a className="dropdown-item" href="/size">Size</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -139,10 +141,11 @@ const Navbar = (props) => {
 }
 
 const mapStateToProps = state => {
-
+   
     return {
         customer : state.customerReducer.customer,
-        token : state.customerReducer.token
+        token    : state.customerReducer.token,
+        admin    : state.adminReducer.admin
     }
  };
 
