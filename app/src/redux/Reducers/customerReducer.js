@@ -1,5 +1,5 @@
 
-import {LOGIN, LOGOUT, REGISTER} from '../Types/customerType';
+import {LOGIN, LOGOUT} from '../Types/customerType';
 
 const initialState = {
   customer : {},
@@ -15,7 +15,7 @@ const customerReducer = (state = initialState, action) => {
       return{
         ...state,
         customer : action.payload.customer,
-        token : action.payload.token
+        token    : action.payload.token
       };
 
     case LOGOUT :
