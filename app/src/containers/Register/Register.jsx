@@ -21,7 +21,7 @@ const Register = () => {
         phone       : '',
     });
 
-    const handleState = (event, props) => {
+    const handleState = (event) => {
         setRegister({...dataRegister, [event.target.name]: event.target.type === "number" ? + event.target.value : event.target.value})
     };
     

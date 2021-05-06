@@ -1,0 +1,19 @@
+
+.spaceUnderH1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 6em;
+} 
+
+.homeAdminBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2em;
+}
+
+.homeAdminForm {
+    width: 40%;
+}

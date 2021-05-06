@@ -34,13 +34,7 @@
     align-items: center;
 }
 
-.registerForm {
-    width: 30%;
-    margin-top: 5em;
-    border: 1px solid grey;
-    padding: 10px;
-    border-radius: 10px;
-}
+
 .buttonRegister {
     width: 4em;
     background: aqua;
