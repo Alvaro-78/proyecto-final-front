@@ -15,17 +15,17 @@ const HomeAdmin = (props) => {
         size        : '',
         description : '',
         price       : '',
-        picture     : '',
         date        : '',
     })
 
     const onSubmit = (e) => {
         e.preventDefault();
     }
-
     const handleState = (event) => {
-        setProduct({...product, [event.target.name]: event.target.type === "number" ? + event.target.value : event.target.value})
+        setProduct({...product, [event.target.name]: event.target.tyoe === 'number' ? + event.target.value : event.target.value})
     };
+
+
 
     const sendProduct = async () => {
 
@@ -51,7 +51,6 @@ const HomeAdmin = (props) => {
 
 
     if(props.admin?.id) {
-        console.log("dentro del if")
         return (
             <div className="adminContainer">
                 <Navbar/>  
@@ -63,7 +62,7 @@ const HomeAdmin = (props) => {
                         <form className="column g-1"
                             onSubmit={onSubmit}>
                             <div className="col-md-2">
-                                <label for="inputEmail1" 
+                                <label htmlFor="inputEmail1" 
                                 className="form-label">
                                     Stock
                                 </label>
@@ -75,7 +74,7 @@ const HomeAdmin = (props) => {
                                 />
                             </div>
                             <div className="col-md-6">
-                                <label for="inputState" 
+                                <label htmlFor="inputState" 
                                 className="form-label">
                                     Category
                                 </label>
@@ -94,7 +93,7 @@ const HomeAdmin = (props) => {
                                 </select>
                             </div>
                             <div className="col-6">
-                                <label for="inputAddress" 
+                                <label htmlFor="inputAddress" 
                                 className="form-label">
                                     Product Name
                                 </label>
@@ -107,7 +106,7 @@ const HomeAdmin = (props) => {
                                 />
                             </div>
                             <div className="col-md-4">
-                                <label for="inputCity" 
+                                <label htmlFor="inputCity" 
                                 className="form-label">
                                     Price
                                 </label>
@@ -119,7 +118,7 @@ const HomeAdmin = (props) => {
                                 />
                             </div>
                             <div className="col-md-6">
-                                <label for="inputState" 
+                                <label htmlFor="inputState" 
                                 className="form-label">
                                     Size
                                 </label>
@@ -139,21 +138,23 @@ const HomeAdmin = (props) => {
                                 <option>Sd Uncle (70+)</option>
                                 </select>
                             </div>
-                            <div class="col md-5">
-                                <label htmlFor="formFileMultiple" 
-                                className="form-label">
-                                    Picture
-                                </label>
-                                <input className="form-control" 
-                                type="file" 
-                                id="formFileMultiple" 
-                                multiple
-                                name="picture"
-                                onChange={handleState}
-                                />
+                            <div className="uploadContainer">
+                                <div class="col md-5">
+                                    <label htmlFor="formFileMultiple" 
+                                    className="form-label">
+                                        Picture
+                                    </label>
+                                    <input className="form-control" 
+                                    type="text" 
+                                    id="formFileMultiple" 
+                                    multiple
+                                    name="picture"
+                                    onChange={handleState}
+                                    />
+                                </div>
                             </div>                        
                             <div className="col-md-4">
-                                <label for="inputZip" 
+                                <label htmlFor="inputZip" 
                                 className="form-label">
                                     Date
                                 </label>
@@ -166,7 +167,7 @@ const HomeAdmin = (props) => {
                             </div>
                             <div class="form-floating">
                                 <div>
-                                    <label for="floatingTextarea2">Description</label>
+                                    <label htmlFor="floatingTextarea2">Description</label>
                                     <textarea class="form-control" 
                                         placeholder="Leave a comment here" 
                                         id="floatingTextarea2" 
@@ -186,7 +187,6 @@ const HomeAdmin = (props) => {
             </div>
         )
     }else {
-        console.log("dentro del else")
         return(
             <div>
                 <h1>you are not admin sry....</h1>
@@ -206,7 +206,3 @@ const mapsStateToProps = state => {
 export default connect(mapsStateToProps)(HomeAdmin);
 
 
-<div className="formAdminContainer">
-<div className="formAdmin">
-// </div>
-// </div>   

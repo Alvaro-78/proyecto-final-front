@@ -59,7 +59,7 @@ const Register = () => {
                 <div className="registerContainer"> 
                     <form className="row g-3 needs-validation" noValidate>
                         <div className="col-md-3">
-                            <label for="validationCustom01" 
+                            <label htmlFor="validationCustom01" 
                             className="form-label">
                                 Name
                             </label>
@@ -75,7 +75,7 @@ const Register = () => {
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <label for="validationCustom02" 
+                            <label htmlFor="validationCustom02" 
                             className="form-label">
                                 SurName
                             </label>
@@ -91,7 +91,7 @@ const Register = () => {
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <label for="validationCustom03" 
+                            <label htmlFor="validationCustom03" 
                             className="form-label">
                                 Email
                             </label>
@@ -110,7 +110,7 @@ const Register = () => {
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <label for="validationCustom04" 
+                            <label htmlFor="validationCustom04" 
                             className="form-label">
                                 Password
                             </label>
@@ -126,7 +126,7 @@ const Register = () => {
                             </div>
                         </div>
                         <div className="col-md-2">
-                            <label for="validationCustom06" 
+                            <label htmlFor="validationCustom06" 
                             className="form-label">
                                 Address
                             </label>
@@ -142,7 +142,7 @@ const Register = () => {
                             </div>
                         </div>
                         <div className="col-md-3">
-                            <label for="validationCustom07" 
+                            <label htmlFor="validationCustom07" 
                             className="form-label">
                                 City
                             </label>
@@ -158,7 +158,7 @@ const Register = () => {
                             </div>
                         </div>
                         <div className="col-md-3">
-                            <label for="validationCustom08" 
+                            <label htmlFor="validationCustom08" 
                             className="form-label">
                                 Province
                             </label>
@@ -174,7 +174,7 @@ const Register = () => {
                             </div>
                         </div>
                         <div className="col-md-2">
-                            <label for="validationCustom09" 
+                            <label htmlFor="validationCustom09" 
                             className="form-label">
                                 Zip Code
                             </label>
@@ -190,7 +190,7 @@ const Register = () => {
                             </div>
                         </div>
                         <div className="col-md-3">
-                            <label for="validationCustom10" 
+                            <label htmlFor="validationCustom10" 
                             className="form-label">
                                 Country
                             </label>
@@ -206,7 +206,7 @@ const Register = () => {
                             </div>
                         </div>
                         <div className="col-md-3">
-                            <label for="validationCustom11" 
+                            <label htmlFor="validationCustom11" 
                             className="form-label">
                                 Phone
                             </label>
@@ -227,7 +227,7 @@ const Register = () => {
                                 id="flexSwitchCheckDefault"
                                 />
                                 <label className="form-check-label" 
-                                for="flexSwitchCheckDefault" 
+                                htmlFor="flexSwitchCheckDefault" 
                                 name="suscription" 
                                 required 
                                 onChange={handleState}>

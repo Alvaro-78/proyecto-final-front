@@ -17,3 +17,10 @@
 .homeAdminForm {
     width: 40%;
 }
+
+.uploadContainer {
+    display: flex;
+    flex-direction: row;
+    width: 30em;
+    border:
+}

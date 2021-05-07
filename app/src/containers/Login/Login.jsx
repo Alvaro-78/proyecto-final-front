@@ -77,7 +77,7 @@ const Login = (props) => {
                 <div className="formContainer">
                 <form action="" onSubmit={onSubmit}>
                     <div className="mb-3">
-                        <label for="exampleInputEmail1" 
+                        <label htmlFor="exampleInputEmail1" 
                         className="form-label">Email address</label>
                         <input type="email" 
                         className="form-control" 
@@ -92,7 +92,7 @@ const Login = (props) => {
                         </div>
                     </div>
                     <div className="mb-3 password">
-                        <label for="exampleInputPassword1" 
+                        <label htmlFor="exampleInputPassword1" 
                         className="form-label">
                             Password
                         </label>
