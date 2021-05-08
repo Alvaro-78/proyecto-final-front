@@ -1,10 +1,12 @@
 import React from 'react';
+import Navbar from '../../components/Navbar/Navbar';
+
 import './Cart.css';
 
 const Cart = () => {
     return (
         <div>
-            <h1>Soy el Cart</h1>
+            <Navbar/>
         </div>
     )
 }
