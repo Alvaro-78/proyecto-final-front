@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import { LOGOUT } from '../../redux/Types/customerType.js';
 import { ADMINLOGOUT } from '../../redux/Types/adminType.js';
 import {useHistory} from 'react-router-dom';
+import Cart from '../CartComponent/CartComponent'
 import './Navbar.css'
 
 
@@ -25,10 +26,8 @@ const Navbar = (props) => {
         },2000);
     };
 
-    console.log(props.admin?.id)
 
     if(props.customer?.id || props.admin?.id) {
-
         return(
             <div className="headerNavbar">
                 <nav className="navbar navbar-expand-lg navbar-grey bg-grey">
@@ -44,10 +43,6 @@ const Navbar = (props) => {
                         </button>
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                    <a className="nav-link active" 
-                                    aria-current="page" href="/cart">Cart</a>
-                                </li>
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" 
                                     href="/categories" id="navbarDropdown" 
@@ -69,24 +64,26 @@ const Navbar = (props) => {
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <div>
-                    <a className="nav-link active logOut"  
-                        aria-current="page" 
-                        onClick={() => logOut()}
-                        >
-                        Salir
-                        </a>
-                    </div>
-                    <div className="customerName">
+                        <div>
+                            <a className="nav-link active logOut"  
+                                aria-current="page" 
+                                onClick={() => logOut()}
+                                >
+                                Salir
+                            </a>
+                        </div>
+                        <div className="customerName">
                         ¡Hola {props.customer?.name}  {props.admin?.name}!
-                        
+                        </div>
+                        <div className="cart">
+                            <Cart/>
+                        </div>
+
                     </div>
                 </nav>
             </div>    
         )    
     } else {
-
         return (
             <div className="headerNavbar">
                 <nav className="navbar navbar-expand-lg navbar-grey bg-grey">
@@ -131,6 +128,9 @@ const Navbar = (props) => {
                                     </ul>
                                 </li>
                             </ul>
+                        </div>
+                        <div className="cart">
+                            <Cart/>
                         </div>
                     </div>
                 </nav>

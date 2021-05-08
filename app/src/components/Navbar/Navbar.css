@@ -1,6 +1,6 @@
 .headerNavbar {
     display: flex;
-    width: 100%;
+    width: 100vmax;
     background-color: grey;
     height: 4em;
 }
@@ -10,4 +10,8 @@
 
 .logOut {
     cursor: pointer;
+}
+
+.container-fluid {
+    width: 100vmax;
 }
