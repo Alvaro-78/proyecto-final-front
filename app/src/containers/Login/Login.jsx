@@ -104,18 +104,20 @@ const Login = (props) => {
                         />
                     </div>
                     <select className="select" 
-                    name="userType" 
-                    defaultValue={'DEFAULT'} 
-                    onChange={handleState}>
+                        name="userType" 
+                        defaultValue={'DEFAULT'} 
+                        onChange={handleState}>
                         <option value="Client">Client</option>
                         <option value="Admin">Admin</option>
                     </select>
                     <button type="submit" 
-                    className="btn btn-primary" 
-                    onClick={() => showPassword()}>show password</button>
-                    <button type="submit" 
-                    className="btn btn-primary" 
-                    onClick={() => sendData()}>Send</button>
+                        className="btn btn-primary" 
+                        onClick={() => showPassword()}>show password</button>
+                        <button type="submit" 
+                        className="btn btn-primary" 
+                        onClick={() => sendData()}>
+                            Send
+                    </button>
                 </form>               
              </div>
             </div>
