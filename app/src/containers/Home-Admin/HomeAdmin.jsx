@@ -8,14 +8,16 @@ import axios from 'axios';
 
 const HomeAdmin = (props) => {
 
+
     const [product, setProduct] = useState ({
-        stock       : '',
-        category    : '',
-        name        : '',
-        size        : '',
+        stock : '',
+        category : '',
+        name : '',
+        size : '',
         description : '',
-        price       : '',
-        date        : '',
+        price : '',
+        picture : '',
+        creation_date : '',
     })
 
     const onSubmit = (e) => {
@@ -26,29 +28,33 @@ const HomeAdmin = (props) => {
     };
 
 
+    const [showProduct, setShowProduct] = useState({
+        product : []
+    })
 
     const sendProduct = async () => {
-
+        console.log("clickado")
         let body = {
-
-            stock       : product.stock,
-            category    : product.category,
-            name        : product.name,
-            size        : product.size,
+            
+            stock : product.stock,
+            category : product.category,
+            name : product.name,
+            size : product.size,
             description : product.description,
-            price       : product.price,
-            date        : product.date,
-            picture     : product.picture,
+            price : product.price,
+            picture : product.picture,
+            creation_date : product.creation_date,
         }
-
         console.log(body)
         
-        let result = await axios.post('http://localhost:3000/admins/createProduct', body);
+        let saveProduct = await axios.post('http://localhost:3000/admins/create-product', body);
 
-        console.log(result)
-
+        console.log("producto creado")
+        setShowProduct({
+            ...showProduct,product: saveProduct.data.result
+        })
+        
     }
-
 
     if(props.admin?.id) {
         return (
@@ -82,14 +88,15 @@ const HomeAdmin = (props) => {
                                 className="form-select"
                                 name="category"
                                 onChange={handleState}
+                                defaultValue={'DEFAULT'}
                                 >
-                                <option selected>Choose...</option>
-                                <option>Boy</option>
-                                <option>Girl</option>
-                                <option>Accesories</option>
-                                <option>Jewelry</option>
-                                <option>Shoes</option>
-                                <option>Discount</option>
+                                    <option selected>Choose...</option>
+                                    <option>Boy</option>
+                                    <option>Girl</option>
+                                    <option>Accesories</option>
+                                    <option>Jewelry</option>
+                                    <option>Shoes</option>
+                                    <option>Discount</option>
                                 </select>
                             </div>
                             <div className="col-6">
@@ -161,7 +168,7 @@ const HomeAdmin = (props) => {
                                 <input type="date" 
                                 className="form-control" 
                                 id="inputZip"
-                                name="date"
+                                name="creation_date"
                                 onChange={handleState}
                                 />
                             </div>
@@ -183,6 +190,17 @@ const HomeAdmin = (props) => {
                             </div>
                         </form>
                     </div>
+                    <div className="dataContainer">
+                        Producto
+                        <div>Stock: {product.stock}</div>
+                        <div>Category: {product.category}</div>
+                        <div>Product Name: {product.name}</div>
+                        <div>Price: {product.price} Euros</div>
+                        <div>Size: {product.size}</div>
+                        <div>Picture: {product.picture}</div>
+                        <div>Date: {product.creation_date}</div>
+                        <div>Description: {product.description}</div>
+                    </div>
                 </div>
             </div>
         )
@@ -198,7 +216,7 @@ const HomeAdmin = (props) => {
 const mapsStateToProps = state => {
 
     return {
-        admin : state.adminReducer.admin
+        admin : state.adminReducer.admin,
     }
 }
 
