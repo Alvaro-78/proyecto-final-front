@@ -55,6 +55,7 @@ const HomeAdmin = (props) => {
         })
         
     }
+    console.log(product.picture)
 
     if(props.admin?.id) {
         return (
@@ -197,7 +198,7 @@ const HomeAdmin = (props) => {
                         <div>Product Name: {product.name}</div>
                         <div>Price: {product.price} Euros</div>
                         <div>Size: {product.size}</div>
-                        <div>Picture: {product.picture}</div>
+                        <div><img scr={product.picture} alt="pic"></img></div>
                         <div>Date: {product.creation_date}</div>
                         <div>Description: {product.description}</div>
                     </div>

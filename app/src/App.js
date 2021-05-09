@@ -5,6 +5,7 @@ import Login from './containers/Login/Login'
 import Register from './containers/Register/Register'
 import Cart from '../src/containers/Cart/Cart'
 import Buy from '../src/containers/Buy/Buy'
+import ShowProduct from '../src/containers/ShowProduct/ShowProduct'
 import HomeAdmin from '../src/containers/Home-Admin/HomeAdmin'
 import Categories from '../src/containers/Categories/Categories'
 import Accesories from '../src/containers/Categories/Accesories/Accesories'
@@ -37,6 +38,7 @@ function App() {
                     <Route exact path='/register' component={Register}/>
                     <Route exact path='/cart' component={Cart}/>
                     <Route exact path='/buy' component={Buy}/>
+                    <Route exact path='/show-product' component={ShowProduct}/>
                     <Route exact path='/home-admin' component={HomeAdmin}/>
                     <Route exact path='/categories' component={Categories}/>
                     <Route exact path='/categories/accesories' component={Accesories}/>
