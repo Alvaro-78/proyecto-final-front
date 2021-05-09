@@ -1,3 +1,2 @@
-export const SAVE = 'save'
-export const PRODUCT = 'productCart'
+export const SHOW = 'show'
 export const BUY = 'buy'

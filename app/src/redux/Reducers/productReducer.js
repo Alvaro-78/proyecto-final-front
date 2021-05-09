@@ -1,27 +1,23 @@
-import { SAVE, PRODUCT, BUY } from '../Types/productType';
+import { SHOW, BUY } from '../Types/productType';
 
 const initialState = {
-    buyProduct: [],
-    saveProduct: [],
-    productCart: [],
+
+  getProduct: []
+   
 };
 
 const productReducer = (state = initialState, action) => {
+
     switch (action.type) {
-      case SAVE: 
+      case SHOW: 
       return {
         ...state, 
-        saveProduct: action.payload
+        getProduct: action.payload
       }
       case BUY: 
       return {
         ...state, 
-        buyProduct: action.payload
-      }
-      case PRODUCT: 
-      return {
-        ...state, 
-        productCart: action.payload
+        getProduct: action.payload
       }
     default:
           return state;
