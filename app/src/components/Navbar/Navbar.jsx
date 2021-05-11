@@ -57,9 +57,7 @@ const Navbar = (props) => {
                                         <li><a className="dropdown-item" href="/categories/accesories">Accesories</a></li>
                                         <li><a className="dropdown-item" href="/categories/Jewelry">Jewelry</a></li>
                                         <li><a className="dropdown-item" href="/categories/shoes">Shoes</a></li>
-                                        <li><a className="dropdown-item" href="/categories/">Discount</a></li>
-                                        <li><hr className="dropdown-divider"/></li>
-                                        <li><a className="dropdown-item" href="/size">Size</a></li>
+                                        <li><a className="dropdown-item" href="/categories/discount">Discount</a></li>
                                     </ul>
                                 </li>
                             </ul>
