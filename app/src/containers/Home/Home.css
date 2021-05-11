@@ -15,39 +15,40 @@
     display: flex;
     margin-left: .5em;
 }
-.imageDiv {
+.carouselContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(220, 219, 215);
 }
 
 
-@media screen and ( max-width: 40% ) {
+/* @media screen and ( max-width: 40% ) {
     .header { width: 25%;
+        font-size: 3vmin;
+    }
+} */
+@media screen and ( max-width: 40% ) {
+    .homeContainer { width: 25%;
         font-size: 3vmin;
     }
 }
 
-a {
-    margin-left: 2em;
-    text-decoration: none;
-    color: rgb(0, 12, 12);
-    font-size: 1vmax;
-    border-radius: 10px;
+.imgSize {
+    width: 80%;
+    height: 40em;
 }
 
-li a {
-    font-size: 1vmax;
+.spaceUnderCaroulse {
+    height: 3em;
+}
+ 
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.dropdownButton {
-    font-size: 1vmax;
-    margin-left: 2em;
-    border-radius: 10px;
-}
-
-.logoName  {
-    font-size: 2vw;
-}
-
-.dropdown-menu {
-    background: none;
+.imgCard {
+    height: 15em;
 }

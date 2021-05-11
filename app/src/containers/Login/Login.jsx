@@ -49,9 +49,9 @@ const Login = (props) => {
             
             if(dataLogin.userType === 'Client') {
                 console.log("el if")
-                let result = await  axios.post('http://localhost:3000/customers/login', body);
+                let resultLogin = await  axios.post('http://localhost:3000/customers/login', body);
                 console.log(props.dispatch)
-                props.dispatch({type: LOGIN, payload: result.data});
+                props.dispatch({type: LOGIN, payload: resultLogin.data})
                 return setTimeout(() => {history.push('/')}, 100);
 
             } else {
