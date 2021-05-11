@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Navbar from '../../components/Navbar/Navbar';
 import {REMOVE, BUY} from '../../redux/Types/productType'
-import {SHOW} from '../../redux/Types/cartType';
 import { useHistory } from 'react-router-dom';
 
 
@@ -23,6 +22,7 @@ const Cart = (props) => {
     console.log(props.cartProduct)
 
     const buyProduct = (product) => {
+        console.log("comprado")
         props.dispatch({type: BUY, payload: product})
         setTimeout(() => {history.push('/buy')}, 100);
     }
@@ -30,34 +30,34 @@ const Cart = (props) => {
 
 
     return (
-        <div className="boyContainer">
+        <div className="fondo">
             <Navbar/>
             <div className="spaceUnderNav"></div>
             <div className="imgBoyContainer">
             {
-                props.cartProduct.map((productData, index) => {
+                props.cartProduct.map((product, index) => {
                     return(
                         <div className="productsData" 
-                        key={productData.product.id}>
+                        key={product.product.id}>
                             <div className="cartContainer">
                                 <div className="insideCart">
                                     <div className="addToCartButton" 
-                                        onClick={() => buyProduct({productData})} 
-                                        className="btn btn-primary">
-                                            Buy Now!!!
-                                    </div>                                        
-                                    <img className="imgCartProduct" src={productData?.product.picture}></img>
-                                    <div className="imgTitle">Name: {productData?.product.name}</div>
-                                    <div className="imgTitle">Size: {productData?.product.size}</div>
-                                    <div className="imgTitle">Category: {productData?.product.category}</div>
-                                    <div className="imgTitle">Size: {productData?.product.size}</div>
-                                    <div className="imgTitle">Price: {productData?.product.price} Euros</div>
-                                    <div className="imgTitle">{productData?.product.creation_date}</div>
-                                    <div className="imgTitle">{productData?.product.description}</div>
-                                    <div className="addToCartButton" 
                                         onClick={() => deleteProduct(index)} 
-                                        className="btn btn-primary">
+                                        className="btn btn-danger">
                                             Delete From Cart
+                                    </div>                                        
+                                    <img className="imgCartProduct" src={product?.product.picture}></img>
+                                    <div className="imgTitle">Name: {product?.product.name}</div>
+                                    <div className="imgTitle">Size: {product?.product.size}</div>
+                                    <div className="imgTitle">Category: {product?.product.category}</div>
+                                    <div className="imgTitle">Size: {product?.product.size}</div>
+                                    <div className="imgTitle">Price: {product?.product.price} Euros</div>
+                                    <div className="imgTitle">{product?.product.creation_date}</div>
+                                    <div className="imgTitle">{product?.product.description}</div>
+                                    <div className="addToCartButton" 
+                                        onClick={() => buyProduct({product})} 
+                                        className="btn btn-primary">
+                                            Buy Now!!!!
                                     </div>                                        
                                 </div>   
                             </div>

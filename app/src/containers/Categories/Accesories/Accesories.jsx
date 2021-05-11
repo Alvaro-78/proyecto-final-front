@@ -43,7 +43,7 @@ const Accesories = (props) => {
     console.log(props)
 
     return (
-        <div>
+        <div className="accesoriesContainer">
            <Navbar/>
            <div className="spaceUnderNav"></div>
            <div className="imgBoyContainer">
