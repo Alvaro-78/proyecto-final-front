@@ -1,0 +1,13 @@
+.cartProduct:active {
+    width: 24em;
+}
+
+.imgCartProduct {
+    width: 20em;
+    height: 22em;
+}
+
+.spaceCartNav {
+    width: 100%;
+    height: 6em;
+}
