@@ -7,10 +7,10 @@ import cart from '../../assets/Icons/cart.png'
 
 const CartComponent = (props) => {
 
-    let totalElementCart = props.cart.length;
+    let totalElementCart 
     return (
         <div className="cartContainer">
-            <Link to='/Cart'><img className="imgCart" src={cart}/></Link>
+            <Link to='/cart'><img className="imgCart" src={cart}/></Link>
             <div className="cartQuantity">{totalElementCart}</div>
         </div>
     )
@@ -18,7 +18,7 @@ const CartComponent = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        cart : state.cartReducer.cart
+        cart : state.productReducer.cart
     }
 }
 
