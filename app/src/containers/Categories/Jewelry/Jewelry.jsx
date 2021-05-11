@@ -41,30 +41,30 @@ const Jewelry = (props) => {
     }
 
     return (
-        <div>
-        <Navbar/>
-        <div className="spaceUnderNav"></div>
-        <div className="boyContainer"></div>
-        <div className="imgBoyContainer">
-            {
-                jewelry.map(product => {
-                    return(
-                        <div className="productsData"  key={product._id}>
-                            <div className="cartContainer">
-                                <div className="insideCart">
-                                    <img className="imgBoy" src={product.picture}></img>
-                                    <div className="imgTitle">{product.name}</div>
-                                    <div className="addToCartButton" 
-                                    onClick={() => saveProduct({product})} 
-                                    className="btn btn-primary">
-                                        Add to Cart
-                                    </div>
-                                    </div>   
+        <div className="jewelryContainer">
+            <Navbar/>
+            <div className="spaceUnderNav"></div>
+            <div className="boyContainer"></div>
+            <div className="imgBoyContainer">
+                {
+                    jewelry.map(product => {
+                        return(
+                            <div className="productsData"  key={product._id}>
+                                <div className="cartContainer">
+                                    <div className="insideCart">
+                                        <img className="imgBoy" src={product.picture}></img>
+                                        <div className="imgTitle">{product.name}</div>
+                                        <div className="addToCartButton" 
+                                        onClick={() => saveProduct({product})} 
+                                        className="btn btn-primary">
+                                            Add to Cart
+                                        </div>
+                                        </div>   
+                                </div>
                             </div>
-                        </div>
-                    )
-                })
-            }
+                        )
+                    })
+                }
             </div>
         </div>
  )
