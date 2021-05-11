@@ -40,10 +40,9 @@ const Shoes = (props) => {
         setTimeout(() => {history.push('/cart')}, 100);
     }
 
-    console.log(products)
 
     return (
-        <div>
+        <div className="shoesContainer">
            <Navbar/>
            <div className="spaceUnderNav"></div>
            <div className="imgBoyContainer">

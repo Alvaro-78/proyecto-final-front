@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 import { LOGIN } from "../../redux/Types/customerType";
 import { ADMINLOGIN } from "../../redux/Types/adminType";
 import { useHistory } from 'react-router-dom';
+import Navbar from '../../components/Navbar/Navbar';
+import handmade3 from '../../assets/pictures/handmade3.jpg';
+import Footer from '../../components/Footer/Footer'
+
 
 import './Login.css';
 
@@ -71,7 +75,7 @@ const Login = (props) => {
     return (
         <div className="loginBody">
             <div className="header">
-                <a className="logoName" href="/">DOLLMINATRIX</a>
+                <Navbar/>
             </div>
             <div className="formBody">
                 <div className="formContainer">
@@ -121,6 +125,10 @@ const Login = (props) => {
                 </form>               
              </div>
             </div>
+            <div>
+                <img className="handMade2" src={handmade3} alt="handmade3"></img>
+            </div>
+            <Footer/>
         </div>
     );
 };

@@ -49,13 +49,11 @@ const HomeAdmin = (props) => {
         
         let saveProduct = await axios.post('http://localhost:3000/admins/create-product', body);
 
-        console.log("producto creado")
         setShowProduct({
             ...showProduct,product: saveProduct.data.result
         })
         
     }
-    console.log(product.picture)
 
     if(props.admin?.id) {
         return (
@@ -68,7 +66,7 @@ const HomeAdmin = (props) => {
                     <div className="homeAdminForm">
                         <form className="column g-1"
                             onSubmit={onSubmit}>
-                            <div className="col-md-2">
+                            <div className="col-md-2 ml-2">
                                 <label htmlFor="inputEmail1" 
                                 className="form-label">
                                     Stock
