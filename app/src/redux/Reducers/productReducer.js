@@ -1,20 +1,15 @@
-import { BUY, REMOVE } from '../Types/productType';
+import { BUY, REMOVE, ORDER } from '../Types/productType';
 
 const initialState = {
   
   cart: [],
   
-   
 };
 
 const productReducer = (state = initialState, action) => {
 
     switch (action.type) {
-        case BUY: 
-        return {
-          ...state, 
-          cart: [...state.cart, action.payload]
-        }
+        
         case BUY: 
         return {
             ...state,
@@ -30,6 +25,12 @@ const productReducer = (state = initialState, action) => {
               ...state.cart.slice(numIndex + 1)
           ]
       }  
+      case ORDER: 
+      return {
+          ...state,
+          cart : action.payload
+      }
+
 
       default:
             return state;

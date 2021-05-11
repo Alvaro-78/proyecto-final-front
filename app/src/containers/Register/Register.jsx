@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-
 import './Register.css';
 import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer'
 
 const Register = () => {
 
@@ -45,9 +45,7 @@ const Register = () => {
         
         let result = await axios.post('http://localhost:3000/customers', body);
 
-        console.log(result)
     }
-
 
     return (
         <div className="registerBody">
@@ -246,6 +244,8 @@ const Register = () => {
                     </form>            
                 </div>
             </div>
+            <div className="underForm"></div>
+            <Footer/>
         </div>
     )
 }

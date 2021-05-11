@@ -10,26 +10,11 @@ const ShowProduct = (props) => {
 
     const history = useHistory();
 
-    // const [quantity, setQuantity] = useState ({
-        
-    //     inputQuantity : ''
-    // })
-    
-    // const handleState = (event) => {
-    //     setQuantity({...quantity, [event.target.name]: event.target.tyoe === 'number' ? + event.target.value : event.target.value})
-    // };
-
-    // let body = {
-    //     productId : props.getProduct.boy
-    // }
-    
-
     const sendToCart = async () => {
         props.dispatch({type: SHOW, payload: props.cartProduct})
         return setTimeout(() => {history.push('/cart')}, 100);
     }
 
-    console.log(props.cartProduct.product)
 
     return (
         <div className="boyContainer">
