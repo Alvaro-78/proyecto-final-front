@@ -2,7 +2,7 @@
     display: flex;
     width: 100vmax;
     background-color: grey;
-    height: 4em;
+    height: 5em;
 }
 .customerName {
     width: 14em;
@@ -14,4 +14,30 @@
 
 .container-fluid {
     width: 100vmax;
+}
+
+a {
+    margin-left: 2em;
+    text-decoration: none;
+    color: rgb(0, 12, 12);
+    font-size: 1vmax;
+    border-radius: 10px;
+}
+
+li a {
+    font-size: 1vmax;
+}
+
+.dropdownButton {
+    font-size: 1vmax;
+    margin-left: 2em;
+    border-radius: 10px;
+}
+
+.logoName  {
+    font-size: 2vw;
+}
+
+.dropdown-menu {
+    background: none;
 }

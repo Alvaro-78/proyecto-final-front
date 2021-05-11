@@ -69,11 +69,11 @@ const Navbar = (props) => {
                                 aria-current="page" 
                                 onClick={() => logOut()}
                                 >
-                                Salir
+                                Exit
                             </a>
                         </div>
                         <div className="customerName">
-                        ¡Hola {props.customer?.name}  {props.admin?.name}!
+                        ¡Hello {props.customer?.name}  {props.admin?.name}!
                         </div>
                         <div className="cart">
                             <Cart/>
@@ -123,8 +123,6 @@ const Navbar = (props) => {
                                         <li><a className="dropdown-item" href="/categories/Jewelry">Jewelry</a></li>
                                         <li><a className="dropdown-item" href="/categories/">Shoes</a></li>
                                         <li><a className="dropdown-item" href="/categories/">Discount</a></li>
-                                        <li><hr className="dropdown-divider"/></li>
-                                        <li><a className="dropdown-item" href="/size">Size</a></li>
                                     </ul>
                                 </li>
                             </ul>
