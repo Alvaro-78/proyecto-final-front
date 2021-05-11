@@ -3,7 +3,7 @@ import Navbar from '../../../components/Navbar/Navbar';
 import './Boy.css';
 import axios from 'axios';
 import { connect } from 'react-redux';
-import {SHOW} from '../../../redux/Types/productType';
+import {SHOW} from '../../../redux/Types/cartType';
 import { useHistory } from 'react-router-dom';
 
 
@@ -32,9 +32,9 @@ const Boy = (props) => {
 
     const boys = products.listProducts.filter(objecProduct => objecProduct.category.includes('Boy'));
     
-    const saveProduct = (boy) => {
-        props.dispatch({type: SHOW, payload: boy})
-        setTimeout(() => {history.push('/show-product')}, 100);
+    const saveProduct = (product) => {
+        props.dispatch({type: SHOW, payload: product})
+        setTimeout(() => {history.push('/cart')}, 100);
     }
 
     return (
@@ -43,16 +43,23 @@ const Boy = (props) => {
             <div className="spaceUnderNav"></div>
             <div className="imgBoyContainer">
             {
-                   boys.map(boy => {
-                       return(
-                           <div className="productsData" onClick={() => saveProduct({boy})}  key={products._id}>
-                               <div>
-                                    <img className="imgBoy" src={boy.picture}></img>
-                                    <div className="imgTitle">{boy.name}</div>
-                               </div>
-                           </div>
-                       )
-                   })
+                boys.map(product => {
+                    return(
+                        <div className="productsData"  key={product._id}>
+                            <div className="cartContainer">
+                                <div className="insideCart">
+                                    <img className="imgBoy" src={product.picture}></img>
+                                    <div className="imgTitle">{product.name}</div>
+                                    <div className="addToCartButton" 
+                                    onClick={() => saveProduct({product})} 
+                                    className="btn btn-primary">
+                                        Add to Cart
+                                    </div>
+                                    </div>   
+                            </div>
+                        </div>
+                    )
+                })
             }
             </div>
         </div>
@@ -61,7 +68,7 @@ const Boy = (props) => {
 
 const mapStateToProps = state => {
     return {
-        getProduct : state.productReducer.getProduct
+        cartProduct : state.cartReducer.cartProduct
     }
 };
 

@@ -1,8 +1,6 @@
-
-
 .spaceUnderNav {
     width: 100%;
-    height: 2em;
+    height: 4em;
 }
 
 .imgBoyContainer {
@@ -26,4 +24,15 @@
 
 .productsData {
     cursor: pointer;
+}
+
+.card {
+    width: 18rem;
+}
+
+.insideCart {
+    display: flex;
+    flex-direction: column;
+    border: grey solid 1px;
+    border-radius: 8px;
 }
