@@ -1,8 +1,15 @@
+.registerBody {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url('../../assets//pictures/fondo2.jpg');
+}
+
+
 .formBody {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .registerContainer {    
@@ -10,6 +17,12 @@
     border-radius: 10px;
     width: 50%;
     height: 60%;
+    background-color: rgba(162,134,113,255);
+}
+
+.underForm {
+    width: 100%;
+    height: 30em;
 }
 
 .spaceUnderHeader {

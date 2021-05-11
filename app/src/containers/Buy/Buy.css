@@ -1,0 +1,17 @@
+.imgBuy {
+    width: 20em;
+}
+.buyContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100em;
+    background-size: cover;
+    background-image: url('../../assets//pictures/fondo.jpg');
+
+}
+
+.productsToShow {
+    background-color: rgb(162,134,113,255);
+}

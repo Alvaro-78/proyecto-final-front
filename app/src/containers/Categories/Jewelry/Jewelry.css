@@ -8,3 +8,11 @@
     width: 100%;
     height: 50em;
 }
+
+.jewelryContainer {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url('../../../assets/pictures/fondo.jpg');
+
+}

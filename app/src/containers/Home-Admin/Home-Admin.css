@@ -1,4 +1,10 @@
+.adminContainer {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url('../../assets/pictures/fondo.jpg');
 
+}
 .spaceUnderH1 {
     display: flex;
     align-items: center;
@@ -9,12 +15,15 @@
 
 .homeAdminBody {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-left: 2em;
 }
 
 .homeAdminForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40%;
 }
 
@@ -24,5 +33,12 @@
     width: 30em;
 }
 .dataContainer {
-    width: 60%;
+    margin-left: 6em;
+    width: 30%;
+    background-color: rgb(162,134,113,255);
+
+}
+
+.column {
+    background-color: rgb(162,134,113,255);
 }

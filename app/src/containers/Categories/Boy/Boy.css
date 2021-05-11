@@ -8,8 +8,14 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 5em;
+}
+
+.boyContainer {
     width: 100%;
-    height: 50em;
+    height: 100%;
+    background-size: cover;
+    background-image: url('../../../assets/pictures/fondo.jpg');
+
 }
 
 .boyPic {
@@ -35,4 +41,5 @@
     flex-direction: column;
     border: grey solid 1px;
     border-radius: 8px;
+    background-color: rgb(220, 219, 215);
 }
