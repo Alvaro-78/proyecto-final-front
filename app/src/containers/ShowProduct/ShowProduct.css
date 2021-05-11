@@ -1,0 +1,28 @@
+.productImg {
+    width: 20em;
+    height: 30em;
+}
+
+.showProductContainer {
+    margin-left: 4em;
+    width: 50%;
+    border: solid 1px grey
+}
+
+.productsToShow {
+    display: flex;
+    flex-direction: row;
+}
+
+.insideContainer {
+    margin-left: 4em;
+    text-align: left;
+}
+
+.SendToCart {
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+}
+
+
