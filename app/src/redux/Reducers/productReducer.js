@@ -1,27 +1,39 @@
-import { SHOW, BUY } from '../Types/productType';
+import { BUY, REMOVE } from '../Types/productType';
 
 const initialState = {
-
-  getProduct: []
+  
+  cart: [],
+  
    
 };
 
 const productReducer = (state = initialState, action) => {
 
     switch (action.type) {
-      case SHOW: 
+        case BUY: 
+        return {
+          ...state, 
+          cart: [...state.cart, action.payload]
+        }
+        case BUY: 
+        return {
+            ...state,
+            cart : action.payload
+        }
+    
+      case REMOVE: 
+      const numIndex = parseInt(action.payload)
       return {
-        ...state, 
-        getProduct: action.payload
-      }
-      case BUY: 
-      return {
-        ...state, 
-        getProduct: action.payload
-      }
-    default:
-          return state;
-    };
+          ...state,
+          cart: [
+              ...state.cart.slice(0, numIndex),
+              ...state.cart.slice(numIndex + 1)
+          ]
+      }  
+
+      default:
+            return state;
+      };
 };
 
 export default productReducer;

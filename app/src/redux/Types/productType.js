@@ -1,2 +1,2 @@
-export const SHOW = 'show'
-export const BUY = 'buy'
+export const BUY = 'BUY'
+export const REMOVE = 'remove'
