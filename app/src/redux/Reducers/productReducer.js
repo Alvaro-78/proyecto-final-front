@@ -16,15 +16,6 @@ const productReducer = (state = initialState, action) => {
             cart : action.payload
         }
     
-      case REMOVE: 
-      const numIndex = parseInt(action.payload)
-      return {
-          ...state,
-          cart: [
-              ...state.cart.slice(0, numIndex),
-              ...state.cart.slice(numIndex + 1)
-          ]
-      }  
       case ORDER: 
       return {
           ...state,

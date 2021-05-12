@@ -40,7 +40,6 @@ const Accesories = (props) => {
 
     }
 
-    console.log(props)
 
     return (
         <div className="accesoriesContainer">

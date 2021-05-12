@@ -52,10 +52,10 @@ const Navbar = (props) => {
                                         Categories
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a className="dropdown-item" href="/categories/boy">Boy</a></li>
+                                        <li><a className="dropdown-item" href="/categories/boy">Boy</a></li>
                                         <li><a className="dropdown-item" href="/categories/girl">Girl</a></li>
                                         <li><a className="dropdown-item" href="/categories/accesories">Accesories</a></li>
-                                        <li><a className="dropdown-item" href="/categories/Jewelry">Jewelry</a></li>
+                                        <li><a className="dropdown-item" href="/categories/jewelry">Jewelry</a></li>
                                         <li><a className="dropdown-item" href="/categories/shoes">Shoes</a></li>
                                         <li><a className="dropdown-item" href="/categories/discount">Discount</a></li>
                                     </ul>

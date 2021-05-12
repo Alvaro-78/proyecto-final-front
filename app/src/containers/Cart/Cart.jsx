@@ -19,10 +19,8 @@ const Cart = (props) => {
         const history = useHistory();
 
 
-    console.log(props.cartProduct)
 
     const buyProduct = (product) => {
-        console.log("comprado")
         props.dispatch({type: BUY, payload: product})
         setTimeout(() => {history.push('/buy')}, 100);
     }

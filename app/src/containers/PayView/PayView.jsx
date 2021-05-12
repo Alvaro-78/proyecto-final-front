@@ -7,7 +7,6 @@ import './PayView.css'
 
 const PayView = (props) => {
 
-    console.log("dentro de pay", props.cart)
 
     return (
         <div className="payContainer">

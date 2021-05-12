@@ -33,7 +33,7 @@ const HomeAdmin = (props) => {
     })
 
     const sendProduct = async () => {
-        console.log("clickado")
+
         let body = {
             
             stock : product.stock,
@@ -45,14 +45,17 @@ const HomeAdmin = (props) => {
             picture : product.picture,
             creation_date : product.creation_date,
         }
-        console.log(body)
         
         let saveProduct = await axios.post('http://localhost:3000/admins/create-product', body);
 
         setShowProduct({
             ...showProduct,product: saveProduct.data.result
-        })
-        
+        })        
+    }
+
+    const handleSubmit = (e) => { 
+        e.preventDefault();
+        e.target.reset(); 
     }
 
     if(props.admin?.id) {
@@ -64,7 +67,8 @@ const HomeAdmin = (props) => {
                 </div>
                 <div className="homeAdminBody">
                     <div className="homeAdminForm">
-                        <form className="column g-1"
+                        <form onSubmit={handleSubmit}
+                            className="column g-1"
                             onSubmit={onSubmit}>
                             <div className="col-md-2 ml-2">
                                 <label htmlFor="inputEmail1" 

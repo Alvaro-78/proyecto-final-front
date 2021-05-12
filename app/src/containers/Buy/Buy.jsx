@@ -19,11 +19,9 @@ const Buy = (props) => {
 
     const buyProduct = () => {
         let result = axios.post(('http://localhost:3000/orders', body))
-        setTimeout(() => {history.push('/')}, 100);
-        console.log(result)
+        setTimeout(() => {history.push('/show-product')}, 100);
     }
 
-     console.log(props.customer)
     if( props.customer.id) {
 
         return (

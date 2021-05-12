@@ -18,28 +18,11 @@
     display: flex;
     margin-left: .5em;
 }
-.carouselContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(220, 219, 215);
-}
 
-
-/* @media screen and ( max-width: 40% ) {
-    .header { width: 25%;
-        font-size: 3vmin;
-    }
-} */
 @media screen and ( max-width: 40% ) {
     .homeContainer { width: 25%;
         font-size: 3vmin;
     }
-}
-
-.imgSize {
-    width: 80%;
-    height: 40em;
 }
 
 .spaceUnderCaroulse {
@@ -54,4 +37,14 @@
 
 .imgCard {
     height: 15em;
+}
+
+.handmadePic {
+    margin-left: 15em;
+    width: 30em;
+}
+
+.topDiv {
+    display: flex;
+
 }

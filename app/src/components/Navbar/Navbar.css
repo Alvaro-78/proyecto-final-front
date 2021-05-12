@@ -1,8 +1,9 @@
 .headerNavbar {
     display: flex;
     width: 100vmax;
-    background-color: grey;
+    background-color: rgba(162,134,113,255);
     height: 5em;
+    
 }
 .customerName {
     width: 14em;

@@ -26,7 +26,6 @@ const Register = () => {
     };
     
     const sendData = async () => {
-        console.log("Me han clickado")
         
         let body = {
             name        : dataRegister.name,
@@ -41,7 +40,6 @@ const Register = () => {
             country     : dataRegister.country,
             phone       : dataRegister.phone,
         }
-        console.log(body)
         
         let result = await axios.post('http://localhost:3000/customers', body);
 

@@ -11,49 +11,59 @@ import linkedin from  '../../assets/Icons/linkedin.png';
 const Footer = () => {
     return (
         <div className="footerBody">
-            <div className="icons">
-                <div className="iconContainer">
-                    <a className="iconContainer"
+            <div className="iconContainer">
+                <div>
+                    <a className="icon"
                     href="https://www.facebook.com/">
                         <img src={facebook} 
                         alt="facebook"/>
                     </a>
                 </div>
-                <div className="iconContainer">
-                    <a className="iconContainer"
+                <div> 
+                    <a className="icon"
                     href="https://twitter.com/">
                         <img src={twitter} 
                         alt=""/>
                     </a>
                 </div>
-                <div className="iconContainer">
-                    <a className="iconContainer"
+                <div>
+                    <a className="icon"
                     href="https://www.instagram.com/">
                         <img src={instagram} 
                         alt=""/>
                     </a>
                 </div>
-                <div className="iconContainer">
-                    <a className="iconContainer"
+                <div >
+                    <a className="icon"
                     href="https://www.whatsapp.com/?lang=es/">
                         <img src={whatsapp} 
                         alt=""/>
                     </a>
                 </div>
-                <div className="iconContainer">
-                    <a className="iconContainer"
+                <div>
+                    <a className="icon"
                     href="https://www.pinterest.es/">
                         <img src={pinterest} 
                         alt=""/>
                     </a>
                 </div>
-                <div className="iconContainer">
-                    <a className="iconContainer"
+                <div>
+                    <a className="icon"
                     href="https://www.linkedin.com/in/%C3%A1lvaro-aguerr%C3%A9/">
                         <img src={linkedin} 
                         alt=""/>
                     </a>
                 </div>
+            </div>
+            <div className="divRedes">
+                <h5>Síguenos en Redes Sociales</h5>
+                Contáctanos por email : madewithlove@gmail.com
+            </div>
+            <footer className="footer">&copy; Copyright 2021 DOLLMINATRIX</footer>
+            <div className="textFooter">
+                <h5>Somos de Valencia pero mandamos a todo el Mundo !!!
+                    contácta con nosotros y preguntanos por precios sin compromiso
+                </h5>
             </div>
         </div>
     )

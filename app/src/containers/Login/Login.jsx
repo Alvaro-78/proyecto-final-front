@@ -37,9 +37,11 @@ const Login = (props) => {
             }
     }
 
-    const onSubmit = (e) => {
+     const handleSubmit = (e) => { 
         e.preventDefault();
+        e.target.reset(); 
     }
+
     
     const sendData = async () => {
 
@@ -49,17 +51,13 @@ const Login = (props) => {
                 email     : dataLogin.email,
                 password  : dataLogin.password
             }
-            console.log(dataLogin)
             
             if(dataLogin.userType === 'Client') {
-                console.log("el if")
                 let resultLogin = await  axios.post('http://localhost:3000/customers/login', body);
-                console.log(props.dispatch)
                 props.dispatch({type: LOGIN, payload: resultLogin.data})
                 return setTimeout(() => {history.push('/')}, 100);
 
             } else {
-                console.log("el else")
                 const resultAdmin = await axios.post('http://localhost:3000/admins/login', body)
                 props.dispatch({type: ADMINLOGIN, payload: resultAdmin.data});
                 return setTimeout(() => {history.push('/home-admin')}, 100);
@@ -79,7 +77,7 @@ const Login = (props) => {
             </div>
             <div className="formBody">
                 <div className="formContainer">
-                <form action="" onSubmit={onSubmit}>
+                <form  onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" 
                         className="form-label">Email address</label>
@@ -95,7 +93,7 @@ const Login = (props) => {
                             We'll never share your email with anyone else.
                         </div>
                     </div>
-                    <div className="mb-3 password">
+                    <div className="mb-2 password">
                         <label htmlFor="exampleInputPassword1" 
                         className="form-label">
                             Password
