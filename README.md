@@ -42,9 +42,11 @@ clone this repo
 npm install
 
 ```
+```
 npm start
 ```
 or
+
 ```
 docker-compose up --build
 
